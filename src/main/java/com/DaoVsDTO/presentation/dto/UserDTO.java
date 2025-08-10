@@ -1,4 +1,4 @@
-package com.DaoVsDTO.persistence.presentation.controller.dto;
+package com.DaoVsDTO.presentation.dto;
 
 
 import lombok.*;

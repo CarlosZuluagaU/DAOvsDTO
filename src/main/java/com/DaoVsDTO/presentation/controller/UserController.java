@@ -1,7 +1,7 @@
-package com.DaoVsDTO.persistence.presentation.controller;
+package com.DaoVsDTO.presentation.controller;
 
 
-import com.DaoVsDTO.persistence.presentation.controller.dto.UserDTO;
+import com.DaoVsDTO.presentation.dto.UserDTO;
 import com.DaoVsDTO.service.interfaces.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

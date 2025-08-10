@@ -2,7 +2,7 @@ package com.DaoVsDTO.service.implementation;
 
 import com.DaoVsDTO.persistence.UserEntity;
 import com.DaoVsDTO.persistence.dao.interfaces.IUserDAO;
-import com.DaoVsDTO.persistence.presentation.controller.dto.UserDTO;
+import com.DaoVsDTO.presentation.dto.UserDTO;
 import com.DaoVsDTO.service.interfaces.IUserService;
 import jakarta.persistence.EntityNotFoundException;
 import org.modelmapper.ModelMapper;

@@ -1,7 +1,7 @@
 package com.DaoVsDTO.service.interfaces;
 
 
-import com.DaoVsDTO.persistence.presentation.controller.dto.UserDTO;
+import com.DaoVsDTO.presentation.dto.UserDTO;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
