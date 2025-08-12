@@ -7,6 +7,10 @@ import jakarta.persistence.PersistenceContext;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.List;
 import java.util.Optional;
 
@@ -51,4 +55,21 @@ public class UserDAOImpl implements IUserDAO {
         }
     }
 
+    @Override
+    @Transactional(readOnly = true) // Es una buena práctica para métodos de solo lectura
+    public Optional<UserEntity> findByEmail(String email) {
+        String jpqlQuery = "SELECT u FROM UserEntity u WHERE u.email = :email";
+
+        try {
+            // Creamos la consulta, le pasamos el tipo de resultado esperado (UserEntity.class)
+            UserEntity user = em.createQuery(jpqlQuery, UserEntity.class)
+                    .setParameter("email", email) // Asignamos el valor al parámetro :email
+                    .getSingleResult(); // Esperamos un único resultado. Si no encuentra nada, lanza una excepción.
+
+            return Optional.of(user); // Si lo encuentra, lo envolvemos en un Optional.
+
+        } catch (jakarta.persistence.NoResultException e) {
+            return Optional.empty();
+        }
+    }
 }
