@@ -24,8 +24,8 @@ Una de las características principales de este proyecto es su documentación au
 URL de Acceso: http://localhost:8080/swagger-ui.html
 
 Esto elimina la necesidad de herramientas de cliente API externas como Postman para la exploración y prueba básicas.
+<img width="1216" height="724" alt="image" src="https://github.com/user-attachments/assets/f1c7f0a9-8fee-42dc-9927-4e7719668b55" />
 
-[AQUÍ PUEDES PONER UNA CAPTURA DE PANTALLA DE TU SWAGGER-UI. ES MUY RECOMENDABLE]
 
 🛠️ Tecnologías Utilizadas
 Java 17+
@@ -55,8 +55,6 @@ Clona el repositorio:
 
 Bash
 
-git clone [URL-DE-TU-REPOSITORIO-EN-GITHUB]
-cd [NOMBRE-DEL-PROYECTO]
 Ejecuta la aplicación usando Maven:
 
 Bash
