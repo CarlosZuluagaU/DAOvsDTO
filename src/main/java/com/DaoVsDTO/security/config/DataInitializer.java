@@ -18,9 +18,9 @@ public class DataInitializer implements CommandLineRunner {
     private PasswordEncoder passwordEncoder;
 
     @Override
-    public void run(String... args) throws Exception {
+
         // --- CREAR USUARIO NORMAL ---
-        // Verifica si el usuario 'user' ya existe
+    public void run(String... args) throws Exception {
         if (userDAO.findByEmail("user@mail.com").isEmpty()) {
             UserEntity user = UserEntity.builder()
                     .name("Usuario")

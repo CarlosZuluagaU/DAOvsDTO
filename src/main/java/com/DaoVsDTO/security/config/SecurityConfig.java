@@ -28,7 +28,16 @@ public class SecurityConfig {
         http
                 .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> auth
+                        // ✅ AÑADE ESTAS LÍNEAS PARA PERMITIR SWAGGER
+                        .requestMatchers(
+                                "/swagger-ui.html",
+                                "/swagger-ui/**",
+                                "/v3/api-docs",
+                                "/v3/api-docs/**"
+                        ).permitAll()
+                        // Tu regla existente para la autenticación
                         .requestMatchers("/api/auth/**").permitAll()
+                        // Todas las demás peticiones requieren autenticación
                         .anyRequest().authenticated()
                 )
                 .sessionManagement(session -> session
